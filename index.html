@@ -53,17 +53,7 @@
         <a-entity mindar-image-target="targetIndex: 5">   
         <a-entity id="myVideo" material="src: #videoId" geometry="primitive: plane;
               width: 1; height: 0.7" position="0 0 0">
-               <!-- Play Button -->
-            <a-entity id="playB" class="interactive" scale="0.2 0.2 0.2" geometry="primitive: plane;"
-            material="src: play.png; transparent: true" position="-0.13 -0.35 0.1">
-        </a-entity>
-
-        <!-- Pause Button -->
-        <a-entity id="pauseB" class="interactive" scale="0.2 0.2 0.2" geometry="primitive: plane;"
-            material="src: pause.png; transparent: true" position="0.13 -0.35 0.1">
-        </a-entity>
-            </a-entity>
-        </a-entity>
+             
 
         <a-camera position="0 0 0" look-controls="enabled: false" cursor="rayOrigin: mouse;"
                 raycaster="far: ${customFields.libVersion}; objects: .interactive"></a-camera>
@@ -73,20 +63,9 @@
     </a-scene>
 </body>
 <script>
-     var playB = document.querySelector("#playB");
-    var pauseB = document.querySelector("#pauseB");
     var video = document.querySelector("video");
-    var logo1 = document.querySelector("#logo");
-    var myModel = document.querySelector("#myModel");
     var myVideo = document.querySelector("myVideo");
 
-    playB.addEventListener('click', () => {
-        video.play();
-    });
-    pauseB.addEventListener('click', () => {
-        video.pause();
-
-    });
 
 
     
